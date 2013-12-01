@@ -1,0 +1,22 @@
+{
+  "name": "gulp-filesize",
+  "version": "0.0.1",
+  "description": "Logs filesizes in human readable Strings",
+  "license": "MIT",
+  "author":"Michael Ostermann <metrime@icloud.com>",
+  "repository": "https://github.com/Metrime/gulp-filesize.git",
+  "keywords":[
+  	"gulpplugin",
+  	"filesize",
+    "size"
+  ],
+  "dependencies": {
+    "event-stream": "~3.0.15",
+    "chalk":"",
+    "filesize":""
+  },
+  "main":"index.js",
+  "devDependencies": {
+    "gulp":"*"
+  }
+}
