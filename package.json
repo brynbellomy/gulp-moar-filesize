@@ -12,8 +12,8 @@
   ],
   "dependencies": {
     "event-stream": "~3.0.15",
-    "chalk":"",
-    "filesize":""
+    "chalk":"~0.3.0",
+    "filesize":"~2.0.0"
   },
   "main":"index.js",
   "devDependencies": {
