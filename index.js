@@ -7,7 +7,7 @@ module.exports = function(){
 
 
   return es.map(function(file,callback){
-  	var filenameShort = file.path.split("/").pop();
+  	var filenameShort = file.path.split(/\/|\\/).pop()
 
   	//Check if file.stat exists (gulp.concat removes it for example)
   	var filesize = file.stat ? getFileSize(file.stat.size) : getFileSize(Buffer.byteLength(String(file.contents)));
