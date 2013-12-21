@@ -1,22 +1,21 @@
 var es = require('event-stream');
-var gulp = require('gulp');
-var chalk = require('chalk');
+var gutil = require('gulp-util');
 var getFileSize = require("filesize");
 
 module.exports = function(){
   'use strict';
 
 
-
   return es.map(function(file,callback){
-  	var filenameShort = file.shortened;
+  	var filenameShort = file.path.split("/").pop();
 
   	//Check if file.stat exists (gulp.concat removes it for example)
   	var filesize = file.stat ? getFileSize(file.stat.size) : getFileSize(Buffer.byteLength(String(file.contents)));
 
-  	gulp.log("Size "+chalk.cyan(filenameShort)+": "+chalk.magenta(filesize));
+  	gutil.log("Size",gutil.colors.magenta(filenameShort),":",gutil.colors.cyan(filesize));
 
   	callback(null,file)
   });
+
 
 };
