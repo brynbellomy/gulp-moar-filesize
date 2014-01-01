@@ -1,4 +1,4 @@
-var es = require('event-stream');
+var es = require('map-stream');
 var gutil = require('gulp-util');
 var getFileSize = require("filesize");
 
@@ -6,7 +6,7 @@ module.exports = function(){
   'use strict';
 
 
-  return es.map(function(file,callback){
+  return map(function(file,callback){
   	var filenameShort = file.path.split(/\/|\\/).pop()
 
   	//Check if file.stat exists (gulp.concat removes it for example)

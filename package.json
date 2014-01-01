@@ -1,6 +1,6 @@
 {
   "name": "gulp-filesize",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Logs filesizes in human readable Strings",
   "license": "MIT",
   "author": {
@@ -17,7 +17,7 @@
     "size"
   ],
   "dependencies": {
-    "event-stream": "~3.0.20",
+    "map-stream": "~0.0.4",
     "gulp-util": "~2.2.0",
     "filesize": "~2.0.0"
   },
