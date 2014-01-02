@@ -1,4 +1,4 @@
-var es = require('map-stream');
+var map = require('map-stream');
 var gutil = require('gulp-util');
 var getFileSize = require("filesize");
 
