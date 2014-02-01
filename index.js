@@ -12,7 +12,7 @@ module.exports = function(){
   	//Check if file.stat exists (gulp.concat removes it for example)
   	var filesize = file.stat ? getFileSize(file.stat.size) : getFileSize(Buffer.byteLength(String(file.contents)));
 
-  	gutil.log("Size",gutil.colors.magenta(filenameShort),":",gutil.colors.cyan(filesize));
+  	gutil.log("Size",gutil.colors.cyan(filenameShort),":",gutil.colors.magenta(filesize));
 
   	callback(null,file)
   });
