@@ -1,7 +1,9 @@
-gulp-filesize
+gulp-moar-filesize
 ===========
 
 [Gulp](https://github.com/wearefractal/gulp) extension to log filesizes in human readable Strings to the console.
+
+**Now works with Gulp plugins that emit `stream.Readable`s**
 
     var size = require('gulp-filesize');
 
