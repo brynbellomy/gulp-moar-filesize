@@ -17,17 +17,17 @@ module.exports = function() {
                     totalSize += chunk.length;
                 })
                 .on('end', function() {
-                    printSizeAndReturn(totalSize, file, filenameShort);
+                    printSizeAndReturn(totalSize, file, filenameShort, callback);
                 });
         }
         else {
             var totalSize = file.stat ? file.stat.size : Buffer.byteLength(file.contents.toString('utf8'));
-            printSizeAndReturn(totalSize, file, filenameShort);
+            printSizeAndReturn(totalSize, file, filenameShort, callback);
         }
     });
 };
 
-function printSizeAndReturn (filesize, file, filenameShort) {
+function printSizeAndReturn (filesize, file, filenameShort, callback) {
     filesize = getFileSize(filesize)
     gutil.log('Size', gutil.colors.cyan(filenameShort), ":", gutil.colors.magenta(filesize));
     callback(null, file);
