@@ -1,15 +1,18 @@
 {
-  "name": "gulp-filesize",
-  "version": "0.0.6",
-  "description": "Logs filesizes in human readable Strings",
+  "name": "gulp-moar-filesize",
+  "version": "1.0.0",
+  "description": "Logs filesizes in human readable Strings (supports stream.Readables, so you can put it after gulp-concat, etc.)",
   "license": "MIT",
-  "author": {
+  "authors": [{
     "name": "Michael Ostermann",
     "email": "metrime@icloud.com"
-  },
+  }, {
+    "name": "bryn austin bellomy",
+    "email": "bryn.bellomy@gmail.com"
+  }],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Metrime/gulp-filesize.git"
+    "url": "https://github.com/brynbellomy/gulp-filesize.git"
   },
   "keywords": [
     "gulpplugin",
@@ -28,8 +31,6 @@
   "readme": "gulp-filesize\n===========\n\n[Gulp](https://github.com/wearefractal/gulp) extension to log filesizes in human readable Strings to the console.\n\n    var size = require('gulp-filesize');\n\nExample\n-------\n    \n\tgulp.src('./css/*.css')\n\t//all your gulp tasks\n\t.pipe(gulp.dest('./dist/')\n\t.pipe(size()) // [gulp] Size example.css: 265.32 kB  \n\t\n\nLicense\n-------\n\nMIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/Metrime/gulp-filesize/issues"
-  },
-  "_id": "gulp-filesize@0.0.1",
-  "_from": "gulp-filesize@"
+    "url": "https://github.com/brynbellomy/gulp-filesize/issues"
+  }
 }
