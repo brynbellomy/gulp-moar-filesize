@@ -1,6 +1,6 @@
 {
   "name": "gulp-moar-filesize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logs filesizes in human readable Strings (supports stream.Readables, so you can put it after gulp-concat, etc.)",
   "license": "MIT",
   "authors": [{
