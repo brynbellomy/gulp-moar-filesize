@@ -21,11 +21,18 @@ module.exports = function() {
                 });
         }
         else {
-            var totalSize = file.stat ? file.stat.size : Buffer.byteLength(file.contents.toString('utf8'));
+            var totalSize = (!nullish(file.stat) && !nullish(file.stat.size) && !isNaN(file.stat.size)) {
+                                ? file.stat.size
+                                : Buffer.byteLength(file.contents.toString('utf8'));
+
             printSizeAndReturn(totalSize, file, filenameShort, callback);
         }
     });
 };
+
+function nullish(val) {
+    return val === null || val === undefined
+}
 
 function printSizeAndReturn (filesize, file, filenameShort, callback) {
     filesize = getFileSize(filesize)
